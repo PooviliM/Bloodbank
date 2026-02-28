@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            background-color: rgb(230, 123, 123);
+            width: auto;
+            height: 50px;
+        }
+        li{
+            display: inline;
+            float: inline-end;
+            padding: 10px;
+            font-size: 17px;
+
+        }
+        h2{
+            text-align: center;
+
+        }
+        table{
+            border: black;
+            border-style: solid;
+        }
+        th{
+            padding: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        td{
+            text-align: center;
+            padding: 5px;
+        }
+        h3{
+            text-align: center;
+        }
+        .bank{
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+        .head {
+            float: left;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <ul>
+        <b>
+        <li><a href="homepage">HOME</a></li>
+        <li><a href="adminpage">ADMIN</a></li>
+        <li><a href="bloodbankpage">BLOOD BANK</a></li>
+        <li><a href="donorpage">DONOR</a></li>
+
+        <li class="head"><img src="/images/logo.jpg" width="30px" height="30px"></li>
+        <li class="head">BLOOD BANK MANAGEMENT</li>
+        </b>
+    </ul>
+    </div>
+    <br> 
+    <h2>Welcome,[[${adminname}]] &#128516;</h2>
+    <h3>DONOR DETAILS</h3>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>CONTACT</th>
+            <th>E-MAIL</th>
+            <th>BLOOD</th>
+            <th>GENDER</th>
+            <th>ADDRESS</th>
+        </tr>
+        
+        <tr th:each="info : ${information}">
+            <td th:text="${info.id}"></td>
+            <td th:text="${info.name}"></td>
+            <td th:text="${info.age}"></td>
+            <td th:text="${info.contact}"></td>
+            <td th:text="${info.email}"></td>
+            <td th:text="${info.blood}"></td>
+            <td th:text="${info.gender}"></td>
+            <td th:text="${info.address}"></td>
+
+        </tr>
+    </table>
+
+    <h3>BLOOD BANK DETAILS</h3>
+
+    <table>
+        <tr>
+            <th class="bank">ID</th>
+            <th class="bank">BLOOD BANK NAME</th>
+            <th class="bank">CONTACT</th>
+            <th class="bank">ADDRESS</th>
+        </tr>
+        <tr th:each="bbdetail : ${bbdetails}">
+            <td th:text="${bbdetail.id}"></td>
+            <td th:text="${bbdetail.bankname}"></td>
+            <td th:text="${bbdetail.contact}"></td>
+            <td th:text="${bbdetail.address}"></td>
+
+        </tr>
+    </table>
+</body>
+</html>

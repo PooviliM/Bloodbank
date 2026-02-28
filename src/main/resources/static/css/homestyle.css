@@ -1,0 +1,14 @@
+.transparnt{
+    background-image:url("/images/BLOOD-BANKS.jpg");
+    width: 1250px;
+    height: 600px;
+    border-radius: 10px;
+    animation-name: image;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+}
+@keyframes image {
+    from{background-image:url("/images/BLOOD-BANKS.jpg");}
+    to{background-image:url("/images/Blood-Donation-1.jpg");}
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            background-color: rgb(230, 123, 123);
+            width: auto;
+            height: 50px;
+        }
+
+        li {
+            display: inline;
+            float: inline-end;
+            padding: 10px;
+            font-size: 17px;
+        }
+
+        h1 {
+            padding-left: 50px;
+        }
+
+        p {
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 20px;
+        }
+
+        .colour {
+            color: red;
+        }
+
+        .footer {
+            float: left;
+            padding-left: 400px;
+            text-align: center;
+        }
+
+        .head {
+            float: left;
+            text-align: center;
+        }
+        .mid{
+            position: relative;
+            width: 1250px;
+            border-style: solid;
+        }
+        .mid-text{
+            position: absolute;
+            width: 350px;
+            height: auto;
+            top: 110px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <ul>
+            <b>
+                <li><a href="homepage">HOME</a></li>
+                <li><a href="adminpage">ADMIN</a></li>
+                <li><a href="bloodbankpage">BLOOD BANK</a></li>
+                <li><a href="donorpage">DONOR</a></li>
+
+                <li class="head"><img src="/images/logo.jpg" width="30px" height="30px"></li>
+                <li class="head">BLOOD BANK MANAGEMENT</li>
+            </b>
+        </ul>
+    </div>
+    <link rel="stylesheet" th:href="@{/css/homestyle.css}">
+
+    <div class="transparnt">
+    </div>
+
+    <h1>Welcome To <span class="colour">Blood Bank</span></h1>
+
+    <p> A blood bank is a facility that collects, stores, and distributes donated blood. It plays a vital role in
+        ensuring a sufficient supply of blood for medical treatments, emergencies, and surgeries. Blood banks carefully
+        screen and test donated blood to ensure its safety before making it available for transfusions.
+        They also match blood types and antigens to ensure compatibility with recipients. The availability of a
+        well-functioning blood bank is crucial in meeting the needs of patients and saving lives.</p>
+
+    <h1>How to <span class="colour">Donate Blood?</span> </h1>
+
+    <p>You may please visit a Clinical Laboratory center and identify your blood group.
+        The clinical test will cost you 50-60 INR only.
+        The result shall be provided in 2 hours time.
+        In case you wish to donate blood now itself, visit your nearest Blood Collection Center.
+        Or alternatively you may register as donor in Indian Blood Bank.
+        Recipients or their relatives or Hospital authorities will contact you directly.</p>
+
+        <div class="mid" >
+            <img src="/images/Blood bank.webp" width="1250px" height="auto">
+            <h1 class="mid-text">
+                <span class="colour ">    Charity For Blood</span><br>Working With US by helping & donation</h1></div>
+
+    <h1>Donor <span class="colour">Guideline</span></h1>
+    <p>Each second of every day, someone needs blood.
+        You can make the choice to donate by being a volunteer donor to save one's life.
+        Never will there be a substitution for your donation.
+        It takes less than an hour to make a life-giving blood donation.
+        To save life, both donor and recipient safety has to be considered.
+        A brief medical check up of you pulse, body iron level, temperature and blood pressure are to be done.
+        Donate blood if you are fit to donate</p>
+
+    <h1><span class="colour">Donation</span> can make someones life better</h1>
+
+    <p>Donating to a blood bank can truly make a positive difference in someone’s life. By giving blood, you provide a
+        precious resource that can help save lives and improve the health of patients in need.
+        When you donate, your blood can be used to treat individuals facing various medical conditions, including those
+        undergoing surgeries, recovering from accidents, or dealing with chronic illnesses. Your contribution can
+        provide essential components like red blood cells, plasma, and platelets, which are crucial for transfusions and
+        medical treatments.
+        The impact of your donation extends beyond the physical realm. It brings hope and reassurance to patients and
+        their loved ones, knowing that there is a community of caring individuals ready to support them in their time of
+        need. Your act of generosity reflects compassion and empathy, touching the lives of others in a profound way.
+        Remember, every donation matters. Your willingness to give can make a significant and positive impact, bringing
+        comfort, strength, and a brighter future to those who rely on the support of blood banks.
+    </p>
+    <div>
+        <ul class="footer">
+            <b>
+                <li><a href="homepage">HOME</a></li>
+                <li><a href="adminpage">ADMIN</a></li>
+                <li><a href="bloodbankpage">BLOOD BANK</a></li>
+                <li><a href="donorpage">DONOR</a></li>
+            </b>
+        </ul>
+    </div>
+</body>
+
+</html>
