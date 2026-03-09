@@ -19,21 +19,21 @@ public class control {
     @Autowired
     private bbrepostory bbrepostory;
 
-    @GetMapping("//homepage")
+    @GetMapping("/homepage")
     public String gethome() {
         return "home";
     }
 
-    @GetMapping("//adminlog")
+    @GetMapping("/adminlog")
     public String getadminlogin() {        
         return "adminlogin";
     }
-    @GetMapping("//adminsign")
+    @GetMapping("/adminsign")
     public String getadminsignup() {        
         return "adminsignup";
     } 
 
-    @PostMapping("//login")
+    @PostMapping("/login")
     public String postMethodName(@RequestParam("id") Long id,@RequestParam("name") String name,@RequestParam("age") String age,@RequestParam("contact") String contact,@RequestParam("email") String email,@RequestParam("blood") String blood,@RequestParam("gender") String gender,@RequestParam("address") String address,Model model) {
         
         information  info=new information();
@@ -51,28 +51,28 @@ public class control {
         return "donor";
     }
 
-    @GetMapping("//adminpage")
+    @GetMapping("/adminpage")
     public String getadmin() {
         return "admin";
     }
     
-    @GetMapping("//donorpage")
+    @GetMapping("/donorpage")
     public String getdonor() {
         return "donor";
     }
     
-    @GetMapping("//bloodbankpage")
+    @GetMapping("/bloodbankpage")
     public String getbloodbank() {
         return "bloodbank";
     }
 
-    @GetMapping("//recipientpage")
+    @GetMapping("/recipientpage")
     public String recipient() {
         return "recipient";
     }
 
 
-    @PostMapping("//admininfo")
+    @PostMapping("/admininfo")
     public String postadmindetail(@RequestParam("id") Long id,@RequestParam("adminname") String adminname,@RequestParam("adminpass") String adminpass,Model model) {
 
         admindetails detail=new admindetails();
@@ -87,7 +87,7 @@ public class control {
 
     
 
-    @PostMapping("//adminsign")
+    @PostMapping("/adminsign")
     public String postMethodName(@RequestParam ("adminname") String adminname,@RequestParam ("adminpass") String adminpass ,Model model) {
         
     admindetails admin = adminrepostory.findByAdminnameAndAdminpass(adminname, adminpass);
@@ -104,7 +104,7 @@ public class control {
         }
     }
 
-    @PostMapping("//bblog")
+    @PostMapping("/bblog")
     public String postMethodbank(@RequestParam ("id") Long id,@RequestParam ("bankname") String bankname,@RequestParam ("address") String address,@RequestParam ("contact") String contact, @RequestParam ("password") String password,Model model) {
 
         bbdetails bbdetail=new bbdetails();
