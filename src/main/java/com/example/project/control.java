@@ -18,7 +18,11 @@ public class control {
 
     @Autowired
     private bbrepostory bbrepostory;
-    
+
+    @GetMapping("/")
+    public String index() {
+        return "home"; 
+    }    
 
     @GetMapping("//homepage")
     public String gethome() {
